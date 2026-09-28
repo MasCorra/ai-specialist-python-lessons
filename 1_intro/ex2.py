@@ -1,6 +1,6 @@
-pizza_price = 2.70
-drink_price = 2.50
-sweet_price = 1.98
+pizza_price = 40
+drink_price = 20
+sweet_price = 20
 total_price = pizza_price + drink_price + sweet_price
 print("Prezzo totale: " + str(total_price) +  "€")
 
