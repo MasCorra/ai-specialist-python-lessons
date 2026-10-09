@@ -6,15 +6,20 @@
 # 5. Se il giorno è mercoledì, applicare un ulteriore sconto di 2 euro
 # 6. Calcolare e stampare il prezzo finale del biglietto
 
-eta = int(input("Inserire l'età: "))
-giorno = str(input("Inserire il giorno della settimana: ")).strip().lower()
-prezzo =  10
-if eta < 12 or eta > 65:
-    prezzo_finale= prezzo/2
-else:
-    prezzo_finale= prezzo
-if (giorno == 'mercoledi'):
-    prezzo_finale=prezzo_finale -2
-else:
-    prezzo_finale=prezzo_finale
-print("Il biglietto costa:", prezzo_finale)
+BASE_PRICE = 10
+REDUCE_PRICE_PERCENTAGE = 0.5
+WEDNESDAY_DISCOUNT = 2
+
+price=BASE_PRICE
+
+age = int(input("Inserire l'età: "))
+day = str(input("Inserire il giorno della settimana: ")).strip().lower()
+
+if age < 12 or age > 65:
+    price = BASE_PRICE * REDUCE_PRICE_PERCENTAGE
+
+    if day == "mercoledì" or day =="mercoledi":
+        price = price - WEDNESDAY_DISCOUNT
+
+
+print(f"Il biglietto costa: {price:.2f}€")
