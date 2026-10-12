@@ -22,6 +22,28 @@ COSTO_SCATOLA= 30
 
 metri_quadri = float(input("Inserire i metri quadri: "))
 lato_stanza = math.sqrt(metri_quadri)
-round_lato = round(lato_stanza, 2)
+round_lato = round(lato_stanza,2)
+print("Il lato della stanza è di:", round_lato, "metri")
+##print(f"Il lato della stanza è di {lato_stanza:.2f}")
+num_piastrelle_lato= round_lato // LATO_PIASTRELLA
+print("Lungo un lato entrano:", num_piastrelle_lato,"piastrelle intere")
+remain_piastrelle = round_lato % LATO_PIASTRELLA
+if not remain_piastrelle:
+    tot_piastrelle = num_piastrelle_lato ** 2
+else:
+    tot_piastrelle = (num_piastrelle_lato + 1) ** 2
+print("Bisogna acquistare", tot_piastrelle,"piastrelle")
+tot_scatole = math.ceil(tot_piastrelle /PIASTRELLE_SCATOLA)
+spesa_totale = tot_scatole * COSTO_SCATOLA
+print(f"La spesa totale è di", spesa_totale,"€")
+piastrelle_comprate= tot_scatole * PIASTRELLE_SCATOLA
+avanzi_piastrelle = piastrelle_comprate - tot_piastrelle
+
+if avanzi_piastrelle > 5:
+    print("Avanzeranno diverse piastrelle")
+else:
+    print("Avanzeranno poche piastrelle")
+
+print("Avanzano esattamente:", avanzi_piastrelle,"piastrelle")
 
 
