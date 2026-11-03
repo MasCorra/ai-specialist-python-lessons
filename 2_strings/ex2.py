@@ -1,4 +1,4 @@
-# Scrivi un proigramma che data un stringa contenente un indirizzo mail,
+# Scrivi un programma che data un stringa contenente un indirizzo mail,
 # mostri diverse informazioni. Il programma deve:
 # 1. Chiedere all'utente di inserire una stringa contenente un indirizzo email
 # 2. Estrarre e stampare il nome utente (parte prima di @)
