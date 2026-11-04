@@ -1,0 +1,7 @@
+categoria,prezzo,quantita,citta,valutazione,data,prezzo_calcolato
+Informatica,999.99,5,Milano,4.8,2026-01-12,4999.95
+Informatica,35.9,20,Milano,4.2,2026-03-01,718.0
+Alimentari,2.5,40,Roma,,2026-02-03,100.0
+Informatica,179.9,7,Torino,4.6,2026-02-08,1259.3
+Alimentari,3.2,50,Napoli,,2026-02-15,160.0
+Informatica,49.9,15,Milano,4.1,2026-02-01,748.5
